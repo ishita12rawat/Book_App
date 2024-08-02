@@ -24,6 +24,40 @@
   height: 10vh;
   align-items: center;
 }
+.favourite {
+  padding: 20px;
+}
+
+.favourite-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between items */
+}
+
+.favourite-item {
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favourite-item:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.favourite img {
+  max-width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.favourite-item img:hover {
+  transform: scale(1.1); /* Slightly scale up image on hover */
+}
+
 .booklist {
   padding: 20px;
 
@@ -65,3 +99,56 @@ button{
 /* button :hover{
   transform: scale(0.1);
 } */
+.bookdetail {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color for better readability */
+  min-height: 100vh; /* Ensure full height of the viewport */
+}
+
+.book-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px; /* Constrain width for better readability */
+  margin: auto; /* Center container horizontally */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for container */
+  background-color: #fff; /* White background for container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.book-detail-container:hover {
+  transform: scale(1.05); /* Slightly scale up container on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.book-detail-container img {
+  max-width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.book-detail-container img:hover {
+  transform: scale(1.1); /* Slightly scale up image on hover */
+}
+
+.book-detail-container h2 {
+  font-size: 2rem; /* Larger font size for the title */
+  color: #333; /* Darker color for better contrast */
+  margin-bottom: 10px; /* Spacing below the title */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.book-detail-container h2:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.book-detail-container p {
+  font-size: 1rem; /* Standard font size for text */
+  color: #555; /* Slightly lighter color for text */
+  line-height: 1.5; /* Improved line spacing */
+  margin: 5px 0; /* Spacing between lines */
+}
